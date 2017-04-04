@@ -1,0 +1,81 @@
+HELP
+Parser
+
+CONTENTS
+
+1. ABOUT
+2. INPUT
+3. OUTPUT
+
+1. ABOUT
+	Parser is a main tool in natural language processing like language translation process, grammar checker and multilingual information extraction. It is used to identify the syntactic constituents of a sentence as a tree structure.
+
+2. INPUT
+	Input can be given in the input text area provided in the top by any one of the methods.
+
+	2.1 Use any keyboard driver to type Tamil
+	2.2 Past the input sentence copied from anywhere.
+	2.3 First select an input file using the 'File' button. Use the 'Next Sentence' button to get the next sentence from the selected file. If you don't want the current sentence to parse or if it is not a proper sentence, get the next sentence. 
+
+	In all the above cases make sure that the encoding is TAB.
+
+3. OUTPUT
+
+	Use the 'Parse' button to parse the sentence provided in the input text area.
+The output of the parsed sentence will be shown in the bottom text area. Symbols used in the output are listed below.			
+
+		Symbol  -  Description
+		 S	Sentence
+		SS	Sub sentence
+		NP	Noun phrase
+		VP	Verb phrase
+		key	Verbal participle
+		RP 	Relative participle
+		Con	Connective
+		Cnjn	Conjunction
+		NC	Noun clause
+		ADJC	Adjective clause
+		ADVC	Adverb clause
+
+	In addition to the above symbols, a lower case 's' can also be added with some of the above to indicate that more than one are joined with a conjunction (ex. NPs indicates that more than one NP are joined with a conjunction).
+	The words of the input sentence will be shown along with their position in the sentence starting from zero separated by a comma.
+	The number adjacent to the English words and symbols are for the testing purpose.
+
+A sample input and output are shown below.
+
+Input:
+Þó£ñù¢ ïù¢ø£èð¢ ð£´õ£ù¢ âù¢Á ð£½ Ãø¤ù£ù¢
+
+Output:
+S(
+             2NC(
+                          SS(
+                                       NP(
+                                                    Noun(
+                                                                 Þó£ñù¢ , 0
+                                                    )
+                                       )
+                                       VP(
+                                                    Adverb1(
+                                                                 ïù¢ø£èð¢ , 1
+                                                    )
+                                                    Verb(
+                                                                 ð£´õ£ù¢ , 2
+                                                    )
+                                       )
+                          )
+                          Con.(
+                                       âù¢Á , 3
+                          )
+             )
+             NP(
+                          Noun(
+                                       ð£½ , 4
+                          )
+             )
+             VP(
+                          Verb(
+                                       Ãø¤ù£ù¢ , 5
+                          )
+             )
+)
